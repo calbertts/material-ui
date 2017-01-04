@@ -1,7 +1,7 @@
 {
   "name": "calbertts-material-ui",
   "author": "Call-em-all Engineering Team",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Special fork from Material Design UI components built with React",
   "main": "./src/index.js",
   "keywords": [
