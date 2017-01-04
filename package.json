@@ -1,9 +1,9 @@
 {
-  "name": "material-ui-build",
+  "name": "calbertts-material-ui-build",
   "private": true,
   "author": "Call-em-all Engineering Team",
-  "version": "0.16.0-alpha",
-  "description": "Material Design UI components built with React",
+  "version": "1.0.5",
+  "description": "Special fork from Material Design UI components built with React",
   "main": "./src/index.js",
   "keywords": [
     "react",
@@ -21,6 +21,8 @@
   },
   "homepage": "http://material-ui.com/",
   "scripts": {
+    "babel-node": "./node_modules/babel-cli/bin/babel-node.js",
+    "rimraf": "./node_modules/rimraf/bin",
     "build": "npm run build:icon-index && npm run build:babel && npm run build:copy-files",
     "build:icon-index": "babel-node ./scripts/icon-index-generator.js",
     "build:babel": "babel ./src --ignore *.spec.js --out-dir ./build",

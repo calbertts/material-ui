@@ -122,6 +122,7 @@ class DatePickerDialog extends Component {
       style, // eslint-disable-line no-unused-vars
       wordings,
       animation,
+      className,
       ...other,
     } = this.props;
 
@@ -141,8 +142,10 @@ class DatePickerDialog extends Component {
     const Container = (container === 'inline' ? Popover : Dialog);
 
     return (
-      <div {...other} ref="root">
+      <div className={className + '-container'} {...other} ref="root">
         <Container
+          className={className + '-dialogContainer'}
+          actionsContainerClassName={className + '-actions'}
           anchorEl={this.refs.root} // For Popover
           animation={animation || PopoverAnimationVertical} // For Popover
           bodyStyle={styles.dialogBodyContent}
@@ -158,6 +161,7 @@ class DatePickerDialog extends Component {
             onKeyUp={this.handleWindowKeyUp}
           />
           <Calendar
+            className={className + '-calendar'}
             autoOk={autoOk}
             DateTimeFormat={DateTimeFormat}
             cancelLabel={cancelLabel}

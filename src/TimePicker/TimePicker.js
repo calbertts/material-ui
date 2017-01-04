@@ -231,6 +231,7 @@ class TimePicker extends Component {
         />
         <TimePickerDialog
           ref="dialogWindow"
+          other={{id: idDialog + '-timePickerDialog'}}
           bodyStyle={dialogBodyStyle}
           initialTime={this.state.dialogTime}
           onAccept={this.handleAcceptDialog}

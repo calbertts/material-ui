@@ -12,7 +12,7 @@ class CalendarActionButton extends Component {
   };
 
   render() {
-    const {cancelLabel, okLabel, wordings} = this.props;
+    const {cancelLabel, okLabel, wordings, className} = this.props;
 
     const styles = {
       root: {
@@ -33,7 +33,7 @@ class CalendarActionButton extends Component {
     };
 
     return (
-      <div style={styles.root} >
+      <div className={className} style={styles.root} >
         <FlatButton
           label={wordings ? wordings.cancel : cancelLabel}
           onTouchTap={this.props.onTouchTapCancel}

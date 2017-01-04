@@ -301,6 +301,7 @@ class DatePicker extends Component {
           value={this.state.date ? formatDate(this.state.date) : ''}
         />
         <DatePickerDialog
+          className={className + '-dialog'}
           DateTimeFormat={DateTimeFormat}
           autoOk={autoOk}
           cancelLabel={cancelLabel}
